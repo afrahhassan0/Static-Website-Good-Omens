@@ -1,0 +1,279 @@
+
+.sub-menu a {
+    /* background-color: rgba(0,0,0,0.3); */
+
+    color: #262626;
+}
+
+.sub-menu a:hover{
+    color:whitesmoke
+}
+
+.title{
+    position: relative;
+
+    padding: 0 20px;
+    padding-top: 140px;
+    text-align: center;
+
+}
+
+.title h1{
+    font-size: 2.3em;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+hr{
+    width: 50%;
+    transform: translateX(50%);
+    
+}
+
+
+main{
+    width: 100%;
+    /* height: 100%; */
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 50px 20px;
+    /* padding-top: 50px; */
+    
+}
+
+.img-gallery{
+    position: relative;
+    /* top: 100%; */
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: auto;
+
+    grid-gap: 15px;
+
+    grid-template-areas: 
+        'gal-1 gal-2 gal-3 gal-3'
+        'gal-1 gal-4 gal-5 gal-6'
+        'gal-7 gal-7 gal-8 gal-6'
+    ;
+
+    padding: 0 20px;
+}
+
+.img-gallery a{
+    width: 100%;
+    height: 25rem;
+    padding: 20px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: justify;
+
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+
+    /* border: solid thin rgba(245, 245, 245, 0.795);
+    border-radius: 1rem; */
+   
+}
+
+
+
+.img-gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.img-gallery a p{
+    /* position: relative; */
+    z-index: 10;
+    margin-top: -5px;
+    margin-bottom: -5px;
+
+    height: 25rem;
+    width: 100%;
+    /* padding: 50% 10px; */
+    
+    /* border: solid thin rgba(245, 245, 245, 0.795); */
+    border-radius: 1rem;
+
+    color: rgba(245, 245, 245, 0.795);
+
+    opacity: 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    transition: opacity 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .img-gallery .img-1 .img-3 .img-6 p{
+    height: fit-content;
+} */
+
+.img-gallery a:hover p, .img-gallery a:hover::before {
+    opacity: 1;
+    
+}
+
+.img-gallery a:hover{
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.gal-1{
+    grid-area: gal-1;
+    background-image: url("../images/gallery-adam.jpg");
+
+    /* for grid layout */
+    min-height: 51.5rem;
+}
+
+.gal-2{
+    grid-area: gal-2;
+    background-image: url("../images/gallery-war.jpg");
+}
+
+.gal-3{
+    grid-area: gal-3;
+    background-image: url("../images/gallery-1.jpg");
+}
+
+.gal-4{
+    grid-area: gal-4;
+    background-image: url("../images/gallery-famine.jpg");
+}
+
+.gal-5{
+    grid-area: gal-5;
+    background-image: url("../images/gallery-death.jpg");
+}
+
+.gal-6{
+    grid-area: gal-6;
+    background-image: url("../images/gallery-anathema.jpg");
+
+    /* for grid layout */
+    min-height: 51.5rem;
+
+    background-position: left;
+}
+
+.gal-7{
+    grid-area: gal-7;
+    background-image: url("../images/gallery-bub.jpg");
+    background-position: bottom bottom;
+}
+
+.gal-8{
+    grid-area: gal-8;
+    background-image: url("../images/gallery-pollution.jpg");
+}
+
+
+
+
+@media screen  and (max-width: 980px){
+
+
+    /* grid */
+
+    .img-gallery{
+       grid-template-areas: 
+        'gal-1 gal-1 gal-6 gal-6'
+        'gal-1 gal-1 gal-3 gal-3'
+        'gal-2 gal-2 gal-4 gal-4'
+        'gal-8 gal-8 gal-5 gal-5'
+        'gal-7 gal-7 gal-7 gal-7'
+       ;
+    }
+
+    .img-gallery a{
+        height: 20rem
+    }
+
+    .img-gallery .gal-6{
+        min-height: 41.5rem;
+    }
+
+    .img-gallery .gal-6{
+        min-height: 20rem;
+    }
+
+    .img-gallery .gal-1{
+        min-height: 41.5rem;
+    }
+
+    .img-gallery a p{
+        font-weight: 600;
+        font-size: 1.4em;
+    }
+
+}
+
+
+.sub-menu a {
+    color: whitesmoke;
+    background-color: rgba(0,0,0,0.6);
+    /* z-index: 1500; */
+}
+
+@media screen and (max-width: 850px){
+
+    .nav-list{
+        background-color: rgba(0,0,0,0.6);
+        z-index: 150;
+    }
+
+    /* .sub-menu a {
+        color: whitesmoke;
+        /* z-index: 1500; */
+    
+}
+
+
+@media screen  and (max-width: 600px){
+    .img-gallery{
+        display: block;
+    }
+
+    .img-gallery a{
+        height: 15rem;
+        margin: 20px 0;
+    }
+
+    .img-gallery .gal-6{
+        min-height: 15rem;
+    }
+    .img-gallery .gal-1{
+        min-height: 15rem;
+    }
+
+    .img-gallery a p{
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+
+}

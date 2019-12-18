@@ -1,0 +1,328 @@
+body{
+    height: initial;
+}
+
+header .nav-list a{
+    font-size: 1.1em
+}
+
+
+section.title{
+
+    padding: 1rem;
+    padding-top: 8rem;
+
+    margin-bottom: 3rem;
+}
+
+.title h1{
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.title h4{
+    font-size: 1.6em;
+    font-style: italic;
+
+    -webkit-text-fill-color: rgb(236, 232, 232);
+    -webkit-text-stroke-color: #716c6c;
+    -webkit-text-stroke-width: 2px;
+    paint-order: fill;
+}
+
+
+
+section.news{
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    /* align-items: center;
+    align-content: center; */
+    justify-content: center;
+}
+
+.news .events-container{
+    margin: 0 auto;
+
+    height: 100%;
+
+    /* display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center; */
+
+    position: relative;
+
+    /* background-color: whitesmoke; */
+}
+
+
+.event .img{
+    display: flex;
+    align-items: center;
+
+    color: whitesmoke;
+    font-size: 1em;
+
+    width: 15rem;
+    height: 10rem;
+
+    margin: auto 0;
+
+    background-position: center;  
+    background-size: cover;
+
+    border-radius: 1rem;
+
+    position: relative;
+
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.event .img span{
+    font-style: italic;
+
+}
+
+.event  > a::before{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left:0;
+    
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+
+    border-radius: 1rem;
+    opacity: 0;
+    transition: 0.5s;
+
+
+}
+
+.event > a p{
+
+    z-index: 5;
+    opacity: 0;
+    transition: 0.5s;
+
+    padding: 10px;
+
+
+}
+
+.event > a:hover::before, .event > a:hover p{
+    opacity: 1;
+}
+
+.img-1{
+    background-image: url("../images/Tennant-sheen-event-1.jpg");
+
+}
+
+
+.details{
+    /* width: 80%; */
+    position: relative;
+
+    margin: auto 0;
+}
+
+.event{
+    width: 80%;
+    margin: 2rem auto;
+    padding: 10px;
+
+    position: relative;
+
+
+    /* height: fit-content; */
+
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1.5rem;
+
+    background-color: whitesmoke;
+    border-radius: 1rem;
+
+    min-height: 17rem;
+}
+
+.event > a{
+    transform: translateX(-25px);
+}
+
+.details h3{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+
+    font-weight: 700;
+}
+
+.details h4{
+    font-style: italic;
+    margin: 5px 0;
+    margin-bottom: 10px;
+
+    position: relative;
+} 
+
+.details >h6{
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    opacity: 0.8;
+}
+
+
+.details p{
+    text-align: justify;
+    padding-right: 10px;
+    /* font-size: 1.1em; */
+    font-weight: 600;
+}
+
+.details a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    
+
+    /* position: absolute;
+    top: 100%;
+    right: 10%; */
+
+    font-size: 18px;
+
+    color: rgba(85, 85, 85, 0.945);
+    font-weight: 700;
+
+    border: solid thin rgba(85, 85, 85, 0.945);
+    border-radius: 50px;
+
+    transition: 0.5s ease;
+}
+
+.details a:hover{
+    background-color: rgba(85, 85, 85, 0.945);
+    color: whitesmoke;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 900px){
+    /* .event .img{
+
+        width: 16rem;
+        height: 11rem;
+    } */
+
+    .details h3{
+        font-size: 1.3em;
+    }
+
+    .details h4{
+        font-size: .9em;
+    }
+
+    .details h6{
+        font-size: 0.8em;
+    }
+
+    .event p{
+        font-size: 0.9em;
+    }
+
+    .event a{
+        font-size: .9em;
+        /* letter-spacing: 1px; */
+    }
+  
+
+
+}
+
+
+
+@media screen and (max-width: 850px){
+    .nav-list{
+        background-color: rgba(0, 0, 0, 0.582);
+    }
+
+    .event{
+        display: block;
+        /* overflow: auto; */
+        
+    }
+
+    .details h6{
+        margin-bottom: 2.2rem;
+    }
+
+    .event .img {
+        /* display: inline-block; */
+        margin-right: 1.5rem;
+      
+        
+        transform: translateX(10px);
+        float: left;
+        z-index: 15;
+    }
+
+
+  
+
+    /* .details{
+        margin-top: 15px;
+    } */
+}
+
+@media screen and (max-width: 700px){
+   
+    .title h1{
+        font-size: 1.9em;
+    }
+
+    .title h4{
+        font-size: 1.5em;
+    }
+
+
+    .event{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .event .img{
+        float: none;
+        margin-bottom: 1rem; 
+
+        width: 18rem; 
+        height: 12rem;
+    }
+
+
+
+    .details h6{
+        margin-bottom: initial;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    
+    .event .img{
+        width: 15rem;
+        height: 10rem;
+    }
+
+    /* .details h */
+}
+
+
